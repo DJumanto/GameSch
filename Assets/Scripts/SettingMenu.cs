@@ -17,4 +17,14 @@ public class SettingMenu : MonoBehaviour
     {
         audioMixer.SetFloat("effectVolume", volume);
     }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(5 - qualityIndex);
+    }
+
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
 }
