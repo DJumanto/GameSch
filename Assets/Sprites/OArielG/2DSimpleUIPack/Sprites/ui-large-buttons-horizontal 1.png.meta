@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d2ceb4de2a713147abc06da178fec62
+guid: 22115228e733aef4dae36156911a70b3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,13 +42,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 48
-  spriteBorder: {x: 1, y: 64, z: 433, w: 1}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,8 +123,8 @@ TextureImporter:
         y: 64
         width: 46
         height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47660828}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,7 +161,7 @@ TextureImporter:
       name: ui-large-buttons-horizontal_2
       rect:
         serializedVersion: 2
-        x: 97
+        x: 98
         y: 64
         width: 46
         height: 15
@@ -1166,7 +1166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui-large-buttons-horizontal_50
+      name: ui-large-buttons-horizontal 1_0
       rect:
         serializedVersion: 2
         x: 1
@@ -1174,14 +1174,14 @@ TextureImporter:
         width: 46
         height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48018834c5cd49741ae992abcfb695fa
-      internalID: -295932887
+      spriteID: 1c1ea819f95299f45899d392c4e41185
+      internalID: -1086181969
       vertices: []
       indices: 
       edges: []
@@ -1190,7 +1190,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -1206,12 +1206,12 @@ TextureImporter:
       ui-large-buttons-horizontal_29: -1140946467
       ui-large-buttons-horizontal_22: 848052973
       ui-large-buttons-horizontal_14: 17397215
+      ui-large-buttons-horizontal 1_0: -1086181969
       ui-large-buttons-horizontal_28: 871963443
       ui-large-buttons-horizontal_1: 711989225
       ui-large-buttons-horizontal_3: 401894288
       ui-large-buttons-horizontal_9: 1261354985
       ui-large-buttons-horizontal_38: 2079976965
-      ui-large-buttons-horizontal_50: -295932887
       ui-large-buttons-horizontal_20: -812964746
       ui-large-buttons-horizontal_4: 127755159
       ui-large-buttons-horizontal_33: -75609473
