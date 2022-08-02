@@ -16,6 +16,6 @@ public class Splash : MonoBehaviour
     private IEnumerator streamVideo()
     {
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Login Scene");
     }
 }
