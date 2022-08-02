@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sprites/Pixel Adventure 1/Scenes/Demo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/OptionSetting.unity
+    guid: 3a61afe00116a3f4391354bf1817eaac
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: edd28071bc160ef47a71ac5086c42bd7
   m_configObjects: {}

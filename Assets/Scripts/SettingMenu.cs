@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
+    public Slider musicSlider;
+    public Slider effectSlider;
+
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
     void Start()
     {
+        audioMixer.GetFloat("musicVolume", out float music);
+        audioMixer.GetFloat("effectVolume", out float effect);
+
+        musicSlider.value = music;
+        effectSlider.value = effect;
+
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -59,5 +70,10 @@ public class SettingMenu : MonoBehaviour
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+
+    public void BackToBefore()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
