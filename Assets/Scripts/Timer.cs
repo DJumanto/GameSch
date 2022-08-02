@@ -7,32 +7,32 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = (float)(new DateTime(2022, 8, 3) - DateTime.UtcNow).TotalSeconds - 25200f;
-
-    /*
-    timer diset berakhir saat tgl 3Ags2022 jam 00.00
-    25200 itu perbedaan waktu wib ke utc dalam detik
-    */
-
+    [SerializeField] private int hour;
+    [SerializeField] private int minute;
     [SerializeField] TextMeshProUGUI countdownText;
+
+    float currentTime = 0f;
+    float startingTime = (float)(new DateTime(2022, 8, 2) - DateTime.UtcNow).TotalSeconds - 25200f;
 
     void Awake()
     {
-        countdownText.text = startingTime.ToString();
+        startingTime += hour*3600 + minute*60;
+
         currentTime = startingTime;
     }
 
     void Update()
     {
+
+        currentTime -= 1 * Time.deltaTime;
+
         if (currentTime <= 0){
             currentTime = 0;
         }
-        else{
-            currentTime -= 1 * Time.deltaTime;
-            float minute = Mathf.FloorToInt(currentTime / 60);
-            float second = Mathf.FloorToInt(currentTime % 60);
-            countdownText.text = string.Format("{0:00}:{1:00}", minute, second); 
-        }
+         
+        TimeSpan timeSpan = TimeSpan.FromSeconds(currentTime);
+        string timeText = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+        countdownText.text = timeText; 
+        
     }
 }

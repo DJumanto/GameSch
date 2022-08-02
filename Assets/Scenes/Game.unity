@@ -940,6 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00e50b13a8cbad4288e0115d8b78ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hour: 17
+  minute: 59
   countdownText: {fileID: 145458849}
 --- !u!1 &145721209
 GameObject:
