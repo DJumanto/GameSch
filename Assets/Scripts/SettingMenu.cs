@@ -74,6 +74,6 @@ public class SettingMenu : MonoBehaviour
 
     public void BackToBefore()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Menu");
     }
 }

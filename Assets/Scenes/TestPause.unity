@@ -8032,6 +8032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: cff0978c9cf001640ae1095da2a02a66, type: 2}
+  musicSlider: {fileID: 1487080346}
+  effectSlider: {fileID: 685203267}
   resolutionDropdown: {fileID: 1498428034}
 --- !u!114 &1261022569
 MonoBehaviour:
