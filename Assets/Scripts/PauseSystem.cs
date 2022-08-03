@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseSystem : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PauseSystem : MonoBehaviour
     public CameraMovement camera;
     public List <Button> crewCards;
     public Button upgradeButton;
+    public List <EventTrigger> infoButton;
+    
     
     void Awake()
     {
@@ -31,6 +34,9 @@ public class PauseSystem : MonoBehaviour
                 for (int i = 0; i < crewCards.Count; i++)
                     crewCards[i].enabled = false;
 
+                for (int i=0; i < infoButton.Count; i++)
+                    infoButton[i].enabled = false;
+
                 // Disable upgrade button
                 upgradeButton.enabled = false;
 
@@ -49,6 +55,10 @@ public class PauseSystem : MonoBehaviour
                 // Enable crew card
                 for (int i = 0; i < crewCards.Count; i++)
                     crewCards[i].enabled = true;
+
+                for (int i=0; i < infoButton.Count; i++)
+                    infoButton[i].enabled = true;
+
 
                 // Enable upgrade button
                 upgradeButton.enabled = true;
@@ -72,6 +82,8 @@ public class PauseSystem : MonoBehaviour
             // Disable crew card
             for (int i = 0; i < crewCards.Count; i++)
                 crewCards[i].enabled = false;
+            for (int i=0; i < infoButton.Count; i++)
+                    infoButton[i].enabled = false;
             // Disable upgrade button
             upgradeButton.enabled = false;
             // disable camera movement
@@ -87,6 +99,8 @@ public class PauseSystem : MonoBehaviour
             // Enable crew card
             for (int i = 0; i < crewCards.Count; i++)
                 crewCards[i].enabled = true;
+            for (int i=0; i < infoButton.Count; i++)
+                    infoButton[i].enabled = true;
             // Enable upgrade button
             upgradeButton.enabled = true;
             // enable camera movement
