@@ -1069,7 +1069,6 @@ GameObject:
   - component: {fileID: 144848000}
   - component: {fileID: 144847999}
   - component: {fileID: 144848002}
-  - component: {fileID: 144848003}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -1179,9 +1178,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 144848003}
-        m_TargetAssemblyTypeName: OpenPauseSettings, Assembly-CSharp
-        m_MethodName: OpenSettings
+      - m_Target: {fileID: 538141553}
+        m_TargetAssemblyTypeName: PauseSystem, Assembly-CSharp
+        m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1191,19 +1190,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &144848003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144847997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f24aa145bae08a44b125865e88953f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingMenu: {fileID: 974386510}
 --- !u!1 &145458847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,7 +1360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 582.7048, y: 485}
+  m_AnchoredPosition: {x: 576, y: 487}
   m_SizeDelta: {x: 233.007, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &147019162
@@ -2629,6 +2615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrewCard (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4984536751203537068, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3667,7 +3657,7 @@ MonoBehaviour:
   year: 2022
   month: 8
   day: 3
-  hour: 13
+  hour: 14
   minute: 0
   countdownText: {fileID: 145458849}
 --- !u!114 &538141553
@@ -3683,14 +3673,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePaused: 0
-  pauseMenu: {fileID: 0}
-  camera: {fileID: 722676186}
-  crewCard: {fileID: 7820748090371718131}
-  crewCard1: {fileID: 1717955478}
-  crewCard2: {fileID: 311356146}
-  crewCard3: {fileID: 1513361265}
-  crewCard4: {fileID: 1645958081}
-  crewCard5: {fileID: 8428787737946743892}
+  settingMenu: {fileID: 974386510}
+  camera: {fileID: 538141551}
+  crewCards:
+  - {fileID: 7820748090371718131}
+  - {fileID: 1717955478}
+  - {fileID: 311356146}
+  - {fileID: 1513361265}
+  - {fileID: 1645958081}
+  - {fileID: 8428787737946743892}
   upgradeButton: {fileID: 1890100507}
 --- !u!1 &598080971
 GameObject:
@@ -3935,7 +3926,6 @@ GameObject:
   - component: {fileID: 620489338}
   - component: {fileID: 620489341}
   - component: {fileID: 620489340}
-  - component: {fileID: 620489342}
   - component: {fileID: 620489339}
   m_Layer: 5
   m_Name: ButtonBack
@@ -4009,9 +3999,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620489342}
-        m_TargetAssemblyTypeName: OpenSetting, Assembly-CSharp
-        m_MethodName: OpenSettings
+      - m_Target: {fileID: 538141553}
+        m_TargetAssemblyTypeName: PauseSystem, Assembly-CSharp
+        m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4059,19 +4049,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620489337}
   m_CullTransparentMesh: 1
---- !u!114 &620489342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620489337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f24aa145bae08a44b125865e88953f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingMenu: {fileID: 974386510}
 --- !u!1 &622080495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,7 +4709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722676186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8079445, y: -3.1089482, z: -10.01482}
+  m_LocalPosition: {x: 0.36, y: -3.1089482, z: -10.01482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9144,7 +9121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477935056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.08, y: -1.52, z: 0}
+  m_LocalPosition: {x: -7.08, y: -2.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9686,6 +9663,10 @@ PrefabInstance:
     - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_Name
       value: CrewCard (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4984536751203537068, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10809,6 +10790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrewCard (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4984536751203537068, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -11214,6 +11199,10 @@ PrefabInstance:
     - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_Name
       value: CrewCard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4984536751203537068, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15408,6 +15397,10 @@ PrefabInstance:
     - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_Name
       value: CrewCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791866946888463220, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4984536751203537068, guid: 3f17a4e2754418b41a36a4e38a1a545e, type: 3}
       propertyPath: m_AnchorMax.x

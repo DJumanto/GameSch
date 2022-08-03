@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class PauseSystem : MonoBehaviour
 {
     public bool gamePaused = false;
-    public GameObject pauseMenu;
-    public GameObject camera;
-    
-    public Button crewCard; 
-    public Button crewCard1;
-    public Button crewCard2;
-    public Button crewCard3;
-    public Button crewCard4;
-    public Button crewCard5;
-
+    public GameObject settingMenu;
+    public CameraMovement camera;
+    public List <Button> crewCards;
     public Button upgradeButton;
+    
+    void Awake()
+    {
+        settingMenu.SetActive(false);
+    }
 
-    void Update () {
+    void Update() {
         if (Input.GetButtonDown("Cancel"))
         {
             if(gamePaused == false)
@@ -29,45 +25,36 @@ public class PauseSystem : MonoBehaviour
                 gamePaused = true;
 
                 // Show pause menu
-                pauseMenu.SetActive(true);
+                settingMenu.SetActive(true);
 
                 // Disable crew card
-                crewCard.enabled = false;
-                crewCard1.enabled = false;
-                crewCard2.enabled = false;
-                crewCard3.enabled = false;
-                crewCard4.enabled = false;
-                crewCard5.enabled = false;
+                for (int i = 0; i < crewCards.Count; i++)
+                    crewCards[i].enabled = false;
 
                 // Disable upgrade button
                 upgradeButton.enabled = false;
 
                 // disable camera movement
-                camera.GetComponent<CameraMovement>().enabled = false;
+                camera.enabled = false;
 
                 // pause audio
                 //AudioListener.pause = true;
             }
             else
             {
-                pauseMenu.SetActive(false);
+                settingMenu.SetActive(false);
                 gamePaused = false;
                 Time.timeScale = 1;
 
                 // Enable crew card
-                crewCard.enabled = true;
-                crewCard1.enabled = true;
-                crewCard2.enabled = true;
-                crewCard3.enabled = true;
-                crewCard4.enabled = true;
-                crewCard5.enabled = true;
+                for (int i = 0; i < crewCards.Count; i++)
+                    crewCards[i].enabled = true;
 
                 // Enable upgrade button
                 upgradeButton.enabled = true;
 
                 // enable camera movement
-                camera.GetComponent<CameraMovement>().enabled = true;
-
+                camera.enabled = true;
                 // unpause audio
                 //AudioListener.pause = false;
             }
@@ -76,53 +63,36 @@ public class PauseSystem : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = 0;
-        gamePaused = true;
-
-        // Show pause menu
-        pauseMenu.SetActive(true);
-
-        // Disable crew card
-        crewCard.enabled = false;
-        crewCard1.enabled = false;
-        crewCard2.enabled = false;
-        crewCard3.enabled = false;
-        crewCard4.enabled = false;
-        crewCard5.enabled = false;
-
-        // Disable updgrade button
-        upgradeButton.enabled = false;
-
-        // disable camera movement
-        camera.GetComponent<CameraMovement>().enabled = false;
-
-        // pause audio
-        //AudioListener.pause = true;
+        if(!settingMenu.activeInHierarchy)
+        {
+            Time.timeScale = 0;
+            gamePaused = true;
+            // Show pause menu
+            settingMenu.SetActive(true);
+            // Disable crew card
+            for (int i = 0; i < crewCards.Count; i++)
+                crewCards[i].enabled = false;
+            // Disable upgrade button
+            upgradeButton.enabled = false;
+            // disable camera movement
+            camera.enabled = false;
+            // pause audio
+            //AudioListener.pause = true;
+        }
+        else
+        {
+            settingMenu.SetActive(false);
+            gamePaused = false;
+            Time.timeScale = 1;
+            // Enable crew card
+            for (int i = 0; i < crewCards.Count; i++)
+                crewCards[i].enabled = true;
+            // Enable upgrade button
+            upgradeButton.enabled = true;
+            // enable camera movement
+            camera.enabled = true;
+            // unpause audio
+            //AudioListener.pause = false;
+        }
     }
-
-    public void UnpauseGame()
-    {
-        pauseMenu.SetActive(false);
-        gamePaused = false;
-        Time.timeScale = 1;
-
-        // Enable crew card
-        crewCard.enabled = true;
-        crewCard1.enabled = true;
-        crewCard2.enabled = true;
-        crewCard3.enabled = true;
-        crewCard4.enabled = true;
-        crewCard5.enabled = true;
-
-        // Enable upgrade button
-        upgradeButton.enabled = true;
-
-        // enable camera movement
-        camera.GetComponent<CameraMovement>().enabled = true;
-
-        // unpause audio
-        //AudioListener.pause = false;
-    }
-
-    
 }
