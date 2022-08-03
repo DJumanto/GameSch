@@ -9,7 +9,7 @@ public class PauseSystem : MonoBehaviour
 {
     public bool gamePaused = false;
     public GameObject pauseMenu;
-    public GameObject cameraa;
+    public GameObject camera;
     
     public Button crewCard; 
     public Button crewCard1;
@@ -43,7 +43,7 @@ public class PauseSystem : MonoBehaviour
                 upgradeButton.enabled = false;
 
                 // disable camera movement
-                cameraa.GetComponent<CameraMovement>().enabled = false;
+                camera.GetComponent<CameraMovement>().enabled = false;
 
                 // pause audio
                 //AudioListener.pause = true;
@@ -66,7 +66,7 @@ public class PauseSystem : MonoBehaviour
                 upgradeButton.enabled = true;
 
                 // enable camera movement
-                cameraa.GetComponent<CameraMovement>().enabled = true;
+                camera.GetComponent<CameraMovement>().enabled = true;
 
                 // unpause audio
                 //AudioListener.pause = false;
@@ -94,7 +94,7 @@ public class PauseSystem : MonoBehaviour
         upgradeButton.enabled = false;
 
         // disable camera movement
-        cameraa.GetComponent<CameraMovement>().enabled = false;
+        camera.GetComponent<CameraMovement>().enabled = false;
 
         // pause audio
         //AudioListener.pause = true;
@@ -118,7 +118,7 @@ public class PauseSystem : MonoBehaviour
         upgradeButton.enabled = true;
 
         // enable camera movement
-        cameraa.GetComponent<CameraMovement>().enabled = true;
+        camera.GetComponent<CameraMovement>().enabled = true;
 
         // unpause audio
         //AudioListener.pause = false;
