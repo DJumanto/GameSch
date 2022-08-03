@@ -803,7 +803,6 @@ GameObject:
   - component: {fileID: 145458848}
   - component: {fileID: 145458850}
   - component: {fileID: 145458849}
-  - component: {fileID: 145458851}
   m_Layer: 5
   m_Name: Countdown
   m_TagString: Untagged
@@ -828,8 +827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: -137}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 2.48, y: 2.1100277e-10}
+  m_SizeDelta: {x: 206.42, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145458849
 MonoBehaviour:
@@ -928,21 +927,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145458847}
   m_CullTransparentMesh: 1
---- !u!114 &145458851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145458847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00e50b13a8cbad4288e0115d8b78ef5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hour: 17
-  minute: 59
-  countdownText: {fileID: 145458849}
 --- !u!1 &145721209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,6 +2235,7 @@ GameObject:
   - component: {fileID: 538141549}
   - component: {fileID: 538141550}
   - component: {fileID: 538141551}
+  - component: {fileID: 538141552}
   m_Layer: 0
   m_Name: _Script
   m_TagString: Untagged
@@ -2322,6 +2307,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 722676188}
   mapRenderer: {fileID: 764896652}
+--- !u!114 &538141552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538141547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00e50b13a8cbad4288e0115d8b78ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  year: 2022
+  month: 8
+  day: 3
+  hour: 13
+  minute: 0
+  countdownText: {fileID: 145458849}
 --- !u!1 &601394943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6346,7 +6349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19, y: -138}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532634246
