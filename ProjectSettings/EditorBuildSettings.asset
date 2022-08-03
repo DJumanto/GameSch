@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 7a8e142d5cf12c3419408c86630b4051
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: edd28071bc160ef47a71ac5086c42bd7
+  - enabled: 1
     path: Assets/Sprites/Pixel Adventure 1/Scenes/Demo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
